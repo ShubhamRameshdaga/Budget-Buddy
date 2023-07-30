@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
+import { message } from "antd";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,11 +25,14 @@ const Login = () => {
           token: res.data.token,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
+        message.success("Login successful!");
         navigate("/");
       } else {
+        message.error("Invalid email or password. Please try again."); // Show error mess
         console.log("Invalid");
       }
     } catch (error) {
+      message.error("Something went wrong. Please try again later."); // Show generic error message
       console.log(error);
     }
   };

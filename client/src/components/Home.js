@@ -116,6 +116,7 @@ const Home = () => {
           ...values,
           userid: user.user._id,
         });
+        message.success("Transaction Added Successfully");
       }
       console.log("success");
       setShowModal(false);
@@ -186,6 +187,7 @@ const Home = () => {
       <Modal
         title={editable ? "Edit Transaction" : "Add Transaction"}
         open={showModal}
+        onCancel={() => setShowModal(false)}
         footer={false}
       >
         <Form

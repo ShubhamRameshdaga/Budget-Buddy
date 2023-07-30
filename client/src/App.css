@@ -110,21 +110,26 @@
   border-bottom: 1px solid black ;
 }
 
-.footer{
-  color: white ;
-  padding :25px ;
-  background: linear-gradient(to right , #434343,#000000);
-}
+@media (max-width: 768px) {
+  /* Reduce the padding around the logo on smaller screens */
+  .navbar{
+    width: 380px;
+  }
 
-.footer a{
-  text-decoration:none; 
-  color : white ;
-  padding :10px ;
-}
+  .navbar-brand img {
+    padding: 5px;
+  }
+  
+  /* Center align the navbar links on smaller screens */
+  .navbar-collapse {
+    text-align: center;
+  }
 
-.footer a:hover{
-  color : #ffefba ; 
-  border-bottom: 1px solid #ffefba ;
+  /* Increase the font size and padding of the navbar links on smaller screens */
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px;
+  }
 }
 
 .pnf{
@@ -288,9 +293,153 @@
 .ant-modal-title {
   color: #fff;
 }
+/* Existing styles... */
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filters {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 70px auto 20px;
+  }
+
+  .content {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    overflow-x: auto;
+    margin: 70px auto;
+  }
+
+  .ant-table {
+    overflow-x: auto;
+  }
+
+  .ant-modal-content {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ant-modal-body {
+    padding: 16px;
+  }
+}
 
 /* Submit Button */
 .d-flex {
   justify-content: flex-end;
   margin-top: 20px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f9f9f9;
+  background-image: radial-gradient(#f9f9f9, #e0e0e0);
+}
+
+.about-section {
+  max-width: 800px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 200px;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-description strong {
+  font-weight: bold;
+}
+
+.about-description ul {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.about-description li {
+  margin-bottom: 10px;
+}
+
+/* Animated Hover Effect */
+.about-section {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-section:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-logo {
+    max-width: 150px;
+  }
+
+  .about-section h2 {
+    font-size: 28px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .about-description li {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-section {
+    padding: 10px;
+  }
+
+  .about-logo {
+    max-width: 120px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .about-description li {
+    margin-bottom: 6px;
+  }
 }

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -27,12 +28,15 @@ const Signup = () => {
         work,
       });
       if (res && res.data.success) {
+        message.success("Registration successful!");
         navigate("/login");
       } else {
         console.log("Something went wrong");
+        message.error(res.data.message);
       }
     } catch (error) {
       console.log(error);
+      message.error("Something went wrong. Please try again later."); // Show generic error message
     }
   };
 

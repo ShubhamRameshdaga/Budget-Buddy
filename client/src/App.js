@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Signup from "./components/Signup";
 import Login from "./components/login";
 import PageNotFound from "./components/PageNotFound";
@@ -25,14 +24,6 @@ function App() {
           element={
             <ProtectedRoutes>
               <About />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <ProtectedRoutes>
-              <Contact />
             </ProtectedRoutes>
           }
         />

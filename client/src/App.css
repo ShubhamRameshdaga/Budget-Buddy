@@ -113,8 +113,8 @@
 @media (max-width: 768px) {
   /* Reduce the padding around the logo on smaller screens */
   .navbar{
-    width: 380px;
-  }
+    width: 100vw;
+  } 
 
   .navbar-brand img {
     padding: 5px;

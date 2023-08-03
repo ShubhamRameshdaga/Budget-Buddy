@@ -45,11 +45,6 @@ const Navbar = () => {
                   About
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
-                </NavLink>
-              </li>
               {!auth.user ? (
                 <>
                   <li className="nav-item">
